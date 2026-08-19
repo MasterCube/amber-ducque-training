@@ -1,0 +1,32 @@
+# Amber trajectories
+*.nc
+*.mdcrd
+*.crd
+*.traj
+
+# Restart files
+*.rst
+*.rst7
+*.ncrst
+
+# Large simulation outputs
+*.out
+*.mdout
+*.mden
+*.mdinfo
+
+# Temporary files
+*.tmp
+*.bak
+*~
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS/editor files
+.DS_Store
+.vscode/
