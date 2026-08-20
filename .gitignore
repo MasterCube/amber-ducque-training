@@ -30,3 +30,5 @@ __pycache__/
 # OS/editor files
 .DS_Store
 .vscode/
+id_ed25519*
+*.pem
