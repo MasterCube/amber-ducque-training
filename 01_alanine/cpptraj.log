@@ -1,0 +1,12 @@
+# 08/23/26 17:32:47
+# Args:  parm7
+# Loaded topologies:
+#   parm7
+trajin 03_Prod.nc
+trajout 03_Prod.dcd dcd
+run
+quit
+trajin 03_Prod.nc
+trajout 03_Prod.dcd dcd
+run
+quit

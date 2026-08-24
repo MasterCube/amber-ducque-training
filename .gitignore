@@ -32,3 +32,4 @@ __pycache__/
 .vscode/
 id_ed25519*
 *.pem
+*.dcd
