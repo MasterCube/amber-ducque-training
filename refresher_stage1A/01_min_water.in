@@ -1,0 +1,12 @@
+Stage 1B - minimize solvent and ions with protein restrained
+&cntrl
+  imin=1,
+  maxcyc=5000,
+  ncyc=2500,
+  ntb=1,
+  cut=10.0,
+  ntr=1,
+  restraint_wt=10.0,
+  restraintmask=':1-61',
+  ntpr=100,
+/

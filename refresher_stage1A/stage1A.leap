@@ -1,0 +1,64 @@
+# ============================================================
+# Stage 1A: AMBER / LEaP refresher
+# Fasciculin protein in explicit TIP3P water
+# ============================================================
+
+# Protein force field
+source leaprc.protein.ff19SB
+
+# Water + compatible ion parameters
+source leaprc.water.tip3p
+
+# ------------------------------------------------------------
+# Load protein
+# ------------------------------------------------------------
+
+fasc = loadPdb fasciculin.amber.dry.pdb
+
+# ------------------------------------------------------------
+# Explicitly define the 4 disulfur bonds
+# ------------------------------------------------------------
+
+bond fasc.3.SG fasc.22.SG
+bond fasc.17.SG fasc.39.SG
+bond fasc.41.SG fasc.52.SG
+bond fasc.53.SG fasc.59.SG
+
+# ------------------------------------------------------------
+# Inspect the molecule before solvation
+# ------------------------------------------------------------
+
+check fasc
+charge fasc
+
+# Save what LEaP thinks the unsolvated structure looks like
+savePdb fasc output/fasciculin_leap.pdb
+
+# ------------------------------------------------------------
+# Solvation
+# 10 Å solvent shell around the protein
+# truncated-octahedral box
+# ------------------------------------------------------------
+
+solvateOct fasc TIP3PBOX 10.0
+
+# ------------------------------------------------------------
+# Neutralize net charge
+# ------------------------------------------------------------
+
+# addIons fasc Na+ 0
+addIons fasc Cl- 0
+
+# Recheck after solvent and ions were added
+check fasc
+charge fasc
+
+# Save visualizable solvated structure
+savePdb fasc output/fasciculin_solvated.pdb
+
+# ------------------------------------------------------------
+# Generate AMBER topology and coordinates
+# ------------------------------------------------------------
+
+saveAmberParm fasc output/fasciculin_solvated.parm7 output/fasciculin_solvated.rst7
+quit

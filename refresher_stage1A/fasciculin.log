@@ -1,0 +1,38 @@
+
+==================================================
+Summary of pdb4amber for: fasciculin.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+-----------Non-standard-resnames
+UNL
+
+---------- Missing heavy atom(s)
+
+None
+
+==================================================
+Summary of pdb4amber for: fasciculin_noUNL.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+-----------Non-standard-resnames
+
+
+---------- Missing heavy atom(s)
+
+None
