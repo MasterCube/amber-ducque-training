@@ -17,3 +17,4 @@ Sherlock HPC workflows, and DuCQUE.
 - `08_replicates/` — replicate simulations
 - `09_sherlock/` — Stanford Sherlock/HPC workflows
 - `10_ducque/` — DuCQUE workflows
+- `refresher_stage1A/` — tLEaP with fasciculin case
